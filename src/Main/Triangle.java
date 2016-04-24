@@ -5,18 +5,17 @@ public class Triangle extends Line {
     protected Coordinates thirdPoint;
     private Coordinates center;
 
-    Triangle (double x1, double y1, double x2, double y2) {
+    public Triangle(double x1, double y1, double x2, double y2) {
         super(x1, y1, x2, y2);
         thirdPoint = new Coordinates(x1, y1);
-        center = new Coordinates(x1, y1);
     }
 
     @Override
 
     public void setSecondPoint(double x, double y) {
         super.setSecondPoint(x, y);
-        firstPoint.x = x - ( x - center.x );
-
+        thirdPoint.x = firstPoint.x;
+        thirdPoint.x = Math.abs(firstPoint.y - secondPoint.y);
     }
 
     @Override

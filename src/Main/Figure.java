@@ -2,7 +2,9 @@ package Main;
 
 import javafx.scene.canvas.GraphicsContext;
 
-public class Figure{
+import java.io.Serializable;
+
+public class Figure implements Serializable{
     protected Coordinates firstPoint;
     public Figure(double x, double y) {
         firstPoint = new Coordinates(x, y);

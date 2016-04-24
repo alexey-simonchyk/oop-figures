@@ -14,6 +14,10 @@ public class FigureList {
         list = new ArrayList();
     }
 
+    public ArrayList getList() {
+        return list;
+    }
+
     public void removeLastFigure(){
         if (list.size() > 0) {
             list.remove(list.size() - 1);
@@ -27,6 +31,10 @@ public class FigureList {
 
     public void clearList(){
         list.clear();
+    }
+
+    public void setList(ArrayList<Figure> list) {
+        this.list = list;
     }
 
     public void add(Figure newFigure){
