@@ -11,8 +11,13 @@ public class MouseLineListener extends MouseListener {
 
     protected Figure figure;
 
-    public MouseLineListener(Canvas canvas, FigureList figureList) {
-        super(canvas, figureList);
+    public MouseLineListener() {
+        super();
+    }
+
+    @Override
+    public void setItems (Canvas canvas, FigureList figureList) {
+        super.setItems(canvas, figureList);
     }
 
     @Override

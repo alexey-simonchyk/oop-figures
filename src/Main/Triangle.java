@@ -3,7 +3,6 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class Triangle extends Line {
     protected Coordinates thirdPoint;
-    private Coordinates center;
 
     public Triangle(double x1, double y1, double x2, double y2) {
         super(x1, y1, x2, y2);

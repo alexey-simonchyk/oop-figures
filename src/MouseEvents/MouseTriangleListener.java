@@ -8,8 +8,13 @@ import javafx.scene.input.MouseEvent;
 
 public class MouseTriangleListener extends MouseLineListener {
 
-    public MouseTriangleListener(Canvas canvas, FigureList figureList) {
-        super(canvas, figureList);
+    public MouseTriangleListener() {
+        super();
+    }
+
+    @Override
+    public void setItems (Canvas canvas, FigureList figureList) {
+        super.setItems(canvas, figureList);
     }
 
     @Override

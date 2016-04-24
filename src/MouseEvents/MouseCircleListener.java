@@ -8,8 +8,13 @@ import javafx.scene.input.MouseEvent;
 
 public class MouseCircleListener extends MouseLineListener {
 
-    public MouseCircleListener(Canvas canvas, FigureList figureList) {
-        super(canvas, figureList);
+    public MouseCircleListener() {
+        super();
+    }
+
+    @Override
+    public void setItems (Canvas canvas, FigureList figureList) {
+        super.setItems(canvas, figureList);
     }
 
     @Override

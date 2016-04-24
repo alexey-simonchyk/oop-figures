@@ -11,10 +11,14 @@ public abstract class MouseListener implements EventHandler<MouseEvent> {
     protected Canvas canvas;
     protected FigureList figureList;
 
-    MouseListener(Canvas canvas, FigureList figureList) {
+    MouseListener() {
+        isDrawing = false;
+    }
+
+
+    public void setItems (Canvas canvas, FigureList figureList) {
         this.canvas = canvas;
         this.figureList = figureList;
-        isDrawing = false;
     }
 
     @Override
