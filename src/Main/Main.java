@@ -1,10 +1,11 @@
 package Main;
 
 
-import MouseEvents.MouseListener;
-import MouseListenerButtons.CircleButton;
-import MouseListenerButtons.LineButton;
-import MouseListenerButtons.TriangleButton;
+import Data.ClassList;
+import Data.FigureList;
+import Data.InformationFile;
+import Data.MouseEvents.MouseListener;
+import Data.MLButton;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -50,16 +51,14 @@ public class Main extends Application {
         figureList.Draw();
 
         group.getChildren().addAll(canvas, buttonClear, buttonUndo);
-        group.getChildren().add(new LineButton().getButton("Line", 110, 10, 80, 20, this));
-        group.getChildren().add(new CircleButton().getButton("Circle", 10, 10, 80, 20, this));
-        group.getChildren().add(new TriangleButton().getButton("Triangle", 210, 10, 80, 20, this));
+        getFigures(group);
 
         Scene scene = new Scene(group, 640, 480);
 
 
         stage.setScene(scene);
         stage.show();
-        
+
 
         buttonClear.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -110,6 +109,31 @@ public class Main extends Application {
     public void setEventHandler (EventHandler eventHandler) {
         lastEventHandler = eventHandler;
         canvas.addEventHandler(MouseEvent.ANY, lastEventHandler);
+    }
+
+    private void getFigures(Group group) {
+        int posX = 10;
+        String[] figures = new ClassList().getFilesList();
+        for (String temp: figures) {
+            try {
+                if (!temp.contains("$")) {
+                    String className = new String(temp.split(".class")[0]);
+                    Class tempClass = Class.forName("Data.MouseListenerButtons." + className);
+                    MLButton button = (MLButton) tempClass.newInstance();
+                    group.getChildren().add(button.getButton(className, posX, 10, 80, 20, this));
+                    posX += 100;
+                }
+            }
+            catch (InstantiationException e) {
+                System.out.println(e);
+            }
+            catch (IllegalAccessException e) {
+                System.out.println(e);
+            }
+            catch (ClassNotFoundException e) {
+                System.out.println(e);
+            }
+        }
     }
 
 }

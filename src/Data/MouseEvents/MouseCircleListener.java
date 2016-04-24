@@ -1,8 +1,8 @@
-package MouseEvents;
+package Data.MouseEvents;
 
-import Main.Circle;
-import Main.Figure;
-import Main.FigureList;
+import Data.Figures.Circle;
+import Data.Figures.Figure;
+import Data.FigureList;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseEvent;
 

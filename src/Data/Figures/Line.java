@@ -1,4 +1,4 @@
-package Main;
+package Data.Figures;
 import javafx.scene.canvas.GraphicsContext;
 
 public class Line extends Figure {

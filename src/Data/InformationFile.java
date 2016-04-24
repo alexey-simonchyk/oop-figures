@@ -1,4 +1,6 @@
-package Main;
+package Data;
+
+import Data.Figures.Figure;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -1,7 +1,8 @@
-package MouseListenerButtons;
+package Data.MouseListenerButtons;
 
+import Data.MLButton;
 import Main.Main;
-import MouseEvents.MouseTriangleListener;
+import Data.MouseEvents.MouseTriangleListener;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;

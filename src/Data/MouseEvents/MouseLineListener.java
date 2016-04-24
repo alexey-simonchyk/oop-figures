@@ -1,8 +1,8 @@
-package MouseEvents;
+package Data.MouseEvents;
 
-import Main.Figure;
-import Main.FigureList;
-import Main.Line;
+import Data.Figures.Figure;
+import Data.FigureList;
+import Data.Figures.Line;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;

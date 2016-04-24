@@ -1,8 +1,8 @@
-package MouseEvents;
+package Data.MouseEvents;
 
-import Main.Figure;
-import Main.FigureList;
-import Main.Triangle;
+import Data.Figures.Figure;
+import Data.FigureList;
+import Data.Figures.Triangle;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseEvent;
 

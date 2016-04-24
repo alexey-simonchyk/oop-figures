@@ -1,4 +1,4 @@
-package MouseListenerButtons;
+package Data;
 
 import Main.Main;
 import javafx.scene.control.Button;

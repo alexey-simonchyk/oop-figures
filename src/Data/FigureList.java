@@ -1,5 +1,6 @@
-package Main;
+package Data;
 
+import Data.Figures.Figure;
 import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ public class FigureList {
     private ArrayList<Figure> list;
     private GraphicsContext graphicsContext;
 
-    FigureList(GraphicsContext graphicsContext) {
+    public FigureList(GraphicsContext graphicsContext) {
         this.graphicsContext = graphicsContext;
         list = new ArrayList();
     }
