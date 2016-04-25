@@ -31,13 +31,6 @@ public class MouseLineListener extends MouseListener {
                 figureList.add(figure);
                 isDrawing = true;
             }
-        } else {
-            if (event.getButton() == MouseButton.SECONDARY) {
-                if (isDrawing) {
-                    figureList.removeLastFigure();
-                }
-                isDrawing = false;
-            }
         }
     }
 

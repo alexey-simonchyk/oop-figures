@@ -1,6 +1,5 @@
 package Main;
 
-
 import Data.ClassList;
 import Data.FigureList;
 import Data.InformationFile;
