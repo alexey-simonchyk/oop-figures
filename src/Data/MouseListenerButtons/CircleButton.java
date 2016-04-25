@@ -8,6 +8,11 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
 public class CircleButton extends MLButton {
+
+    public CircleButton() {
+        name = "Circle";
+    }
+
     @Override
     public void setAction(Button button, Main main) {
         button.setOnAction(new EventHandler<ActionEvent>() {

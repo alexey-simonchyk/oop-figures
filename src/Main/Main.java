@@ -113,6 +113,7 @@ public class Main extends Application {
 
     private void getFigures(Group group) {
         int posX = 10;
+        int posY = 10;
         String[] figures = new ClassList().getFilesList();
         for (String temp: figures) {
             try {
@@ -120,8 +121,13 @@ public class Main extends Application {
                     String className = new String(temp.split(".class")[0]);
                     Class tempClass = Class.forName("Data.MouseListenerButtons." + className);
                     MLButton button = (MLButton) tempClass.newInstance();
-                    group.getChildren().add(button.getButton(className, posX, 10, 80, 20, this));
-                    posX += 100;
+                    group.getChildren().add(button.getButton(button.getNameFigure(), posX, posY, 80, 20, this));
+                    if (posX == 210) {
+                        posX = 10;
+                        posY += 30;
+                    } else {
+                        posX += 100;
+                    }
                 }
             }
             catch (InstantiationException e) {
@@ -137,6 +143,3 @@ public class Main extends Application {
     }
 
 }
-
-
-

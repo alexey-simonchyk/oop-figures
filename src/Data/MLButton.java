@@ -5,6 +5,10 @@ import javafx.scene.control.Button;
 
 public abstract class MLButton {
 
+    protected String name;
+
+    public String getNameFigure() { return name; }
+
     public Button getButton(String name, int x, int y, int width, int height, Main main) {
         Button newButton = new Button(name);
         newButton.setLayoutX(x);

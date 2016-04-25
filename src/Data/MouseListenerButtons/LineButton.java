@@ -9,6 +9,10 @@ import javafx.scene.control.Button;
 
 public class LineButton extends MLButton {
 
+    public LineButton() {
+        name = "Line";
+    }
+
     @Override
     public void setAction(Button button, Main main) {
         button.setOnAction(new EventHandler<ActionEvent>() {

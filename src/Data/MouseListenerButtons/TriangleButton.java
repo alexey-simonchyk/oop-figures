@@ -1,13 +1,18 @@
 package Data.MouseListenerButtons;
 
 import Data.MLButton;
-import Main.Main;
 import Data.MouseEvents.MouseTriangleListener;
+import Main.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
 public class TriangleButton extends MLButton {
+
+    public TriangleButton() {
+        name = "Triangle";
+    }
+
     @Override
     public void setAction(Button button, Main main) {
         button.setOnAction(new EventHandler<ActionEvent>() {
